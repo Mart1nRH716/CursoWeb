@@ -1,6 +1,50 @@
-h1 {
-    text-align: center;
+/*Custom propierties y son colores quye definimos*/
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #13E294;
+    --secundario: #C1FF00;
+    --gris: #757575;
 }
-span{
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    
+}
+.titulo {
+    text-align: center;
+    font-size: 3.8rem; /* 1 rem =  10 px*/
+    /*color: var(--primario);*/
+   
+}
+ /*
+ Se puede escribir aasi y lo que va hacer es solo aplicar unicamnete a spans cuya etiqueta esta contenida en un h1
+ h1 span{
     font-size: 20px;
+} 
+*/ 
+.titulo span{
+    font-size: 2rem;
+    
+}
+.navegacion-principal{
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion-principal a{
+    color: var(--gris);
+    text-decoration: none;
+
+}
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
 }
