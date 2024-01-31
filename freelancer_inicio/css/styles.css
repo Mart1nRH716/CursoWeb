@@ -8,18 +8,53 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+/* Hack para box model es decir, el padding no le afecte a nuestra boxes */
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
     
 }
-.titulo {
-    text-align: center;
-    font-size: 3.8rem; /* 1 rem =  10 px*/
+h1{
+    font-size: 3.8rem;
+    /* 1 rem =  10 px*/
     /*color: var(--primario);*/
-   
 }
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--oscuro);
+    padding: 1rem 3rem; 
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    } 
+}
+
 .titulo span{
     font-size: 2rem;    
 }
@@ -56,5 +91,37 @@ body{
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);  
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Con este alineas horizontamnete siempre que tengas con un flex direction con colum*/
+    justify-content: center; /*Con este verticalmente*/
+}
+
+.contenido-hero h2, .contenido-hero p{
+    color: var(--blanco);
+
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
 }
 
