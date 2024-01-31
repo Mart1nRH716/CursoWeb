@@ -5,6 +5,8 @@
     --primario: #13E294;
     --secundario: #C1FF00;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
+    --morado: #4912C6;
 }
 html{
     font-size: 62.5%;
@@ -17,7 +19,17 @@ html{
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 50%);
     
+}
+
+.sombra{
+    -webkit-box-shadow: 13px 10px 20px 3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 13px 10px 20px 3px rgba(0,0,0,0.7);
+    box-shadow: 13px 10px 20px 3px rgba(0,0,0,0.7);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
 h1{
     font-size: 3.8rem;
@@ -42,6 +54,7 @@ h1,h2,h3{
     margin-top: 1rem;
     font-size: 2rem;
     text-decoration: none;
+    /* Si puiedes hacerlo en css es mejor, por eso las mayusculas de esta forma */
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .5rem;
@@ -100,6 +113,7 @@ h1,h2,h3{
     height: 450px;
     padding: 20px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{
@@ -120,8 +134,84 @@ h1,h2,h3{
     color: var(--blanco);
 
 }
-.ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
     align-items: flex-end;
 }
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Para oibetner una separacion entre las divisones */
+        column-gap: 10px;  
+    }  
+}
 
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--morado);
+    font-weight: bold;
+}
+
+.servicio p{
+    /* Este es el interlineado */
+    line-height: 2; 
+    text-align: center;
+
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formulario{
+    background-color: var(--gris);
+    /* Como en python, utiliza el valor mas peque;o */
+    width: min(60rem,100%);
+    /* ara centrar un formulario cuyo padre no sea un display flex */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+
+
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: .5rem;
+    
+}
