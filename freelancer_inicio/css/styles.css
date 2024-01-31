@@ -20,32 +20,29 @@ body{
     /*color: var(--primario);*/
    
 }
- /*
- Se puede escribir aasi y lo que va hacer es solo aplicar unicamnete a spans cuya etiqueta esta contenida en un h1
- h1 span{
-    font-size: 20px;
-} 
-*/ 
 .titulo span{
-    font-size: 2rem;
-    
+    font-size: 2rem;    
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem; /*Toma el maximo de 120 rems si no usa el 100% lo que hace es que se vaya moviendo el contenido conforme abrimos la pantalla*/
     margin: 0 auto;
 }
 .nav-bg{
     background-color: var(--secundario);
 }
+/*Con display flex los elementos se muestran de izquierda a derecha*/
 .navegacion-principal{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
+    align-items: center; /*por si no funciona justify content esto e spor los jees de flexbox*/
 }
+
 @media (min-width: 768px) {
     .navegacion-principal{
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 .navegacion-principal a{
@@ -62,9 +59,10 @@ body{
 }
 
 /*Para ser una pagina responsive tenemos que hacer queries
-Se hace con esto*/
+Se hace con esto
 @media (min-width: 480px) {
     h1
      
 }
 
+*/
