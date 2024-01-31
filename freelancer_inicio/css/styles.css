@@ -58,11 +58,3 @@ body{
     color: var(--oscuro);  
 }
 
-/*Para ser una pagina responsive tenemos que hacer queries
-Se hace con esto
-@media (min-width: 480px) {
-    h1
-     
-}
-
-*/
