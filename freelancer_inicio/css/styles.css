@@ -60,6 +60,11 @@ h1,h2,h3{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
+}
+
+.boton:hover{
+cursor: pointer;
 }
 
 @media (min-width: 480px) {
@@ -75,6 +80,25 @@ h1,h2,h3{
 .contenedor{
     max-width: 120rem; /*Toma el maximo de 120 rems si no usa el 100% lo que hace es que se vaya moviendo el contenido conforme abrimos la pantalla*/
     margin: 0 auto;
+}
+
+.w-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-100{
+        width: auto;
+    } 
+    
+}
+
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex end;
 }
 .nav-bg{
     background-color: var(--secundario);
@@ -206,12 +230,26 @@ h1,h2,h3{
 
 .campo{
     margin-bottom: 1rem;
-
-
 }
 
 .campo label{
     color: var(--blanco);
+    font-weight: bold;
     font-weight: .5rem;
+    display: block;
     
 }
+
+.campo input, .campo textarea{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+/*
+Tambien se puede declara asi 
+.campo input[type="text"],
+.campo input[type="tel"]
+{
+    background-color: red;
+} */
