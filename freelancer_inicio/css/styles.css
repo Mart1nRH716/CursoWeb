@@ -11,7 +11,16 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    /* Efecto de scroll para cuando le das tantito y te lleva a varias secciones de la pagina */
+    scroll-snap-type: y mandatory;
 }
+/* Scroll snap */
+.servicios, .navegacion-principal,.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+
 /* Hack para box model es decir, el padding no le afecte a nuestra boxes */
 *, *:before, *:after {
     box-sizing: inherit;
@@ -162,6 +171,8 @@ cursor: pointer;
     display: flex;
     align-items: flex-end;
 }
+
+
 @media (min-width: 768px) {
     .servicios{
         display: grid;
